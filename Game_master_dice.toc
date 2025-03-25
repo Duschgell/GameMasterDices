@@ -1,8 +1,8 @@
 ## Interface: 11.1.0
-## Title: Game Master Dices
+## Title: Game Master Dice
 ## Notes: An addon for gamemasters of roleplaying games!
 ## Author: Duschgell
 ## Version: 1.0.0
 ## SavedVariables: GMDicesDB
 
-Game_master_dices.lua
+Game_master_dice.lua
