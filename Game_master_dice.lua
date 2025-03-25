@@ -1,5 +1,5 @@
 -------------------------
--- Game_master_dices.lua
+-- Game_master_dice.lua
 -------------------------
 
 -- 0) GLOBAL / LOCAL REFERENCES
@@ -79,7 +79,7 @@ mainFrame:Hide()  -- Hide the frame on startup.
 
 mainFrame.title = mainFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
 mainFrame.title:SetPoint("LEFT", mainFrame.TitleBg, "LEFT", 5, 0)
-mainFrame.title:SetText("Game Master Dices")
+mainFrame.title:SetText("Game Master Dice")
 
 -- 1.1) DICE SIDES INPUT (default is 20)
 local diceEditBox = CreateFrame("EditBox", nil, mainFrame, "InputBoxTemplate")
@@ -428,7 +428,7 @@ savedVarsFrame:RegisterEvent("PLAYER_LOGOUT")
 savedVarsFrame:RegisterEvent("ADDON_LOADED")  -- for TRP3
 savedVarsFrame:SetScript("OnEvent", function(self, event, arg1)
     if event == "ADDON_LOADED" then
-        if arg1 == "Game_master_dices" then
+        if arg1 == "Game_master_dice" then
             if not GMDicesDB then
                 GMDicesDB = {}
             end
@@ -480,10 +480,10 @@ end)
 -------------------------
 local LDB = LibStub("LibDataBroker-1.1", true)
 if LDB then
-    local dataobj = LDB:NewDataObject("GameMasterDices", {
+    local dataobj = LDB:NewDataObject("GameMasterDice", {
         type = "launcher",
         text = "GMDice",
-        icon = "Interface\\AddOns\\Game_master_dices\\Icon\\dice.tga",
+        icon = "Interface\\AddOns\\Game_master_dice\\Icon\\dice.tga",
         OnClick = function(_, button)
             if mainFrame:IsShown() then
                 mainFrame:Hide()
@@ -493,7 +493,7 @@ if LDB then
             end
         end,
         OnTooltipShow = function(tooltip)
-            tooltip:AddLine("Game Master Dices")
+            tooltip:AddLine("Game Master Dice")
             tooltip:AddLine("Left-click to toggle the dice window.")
         end,
     })
@@ -501,6 +501,6 @@ if LDB then
     if LibDBIcon then
         local defaults = { minimapPos = 220 }
         if not GMDicesDB then GMDicesDB = {} end
-        LibDBIcon:Register("GameMasterDices", dataobj, GMDicesDB)
+        LibDBIcon:Register("GameMasterDice", dataobj, GMDicesDB)
     end
 end
