@@ -149,7 +149,7 @@ end)
 
 local addNPCButton = CreateFrame("Button", nil, mainFrame, "GameMenuButtonTemplate")
 addNPCButton:SetSize(60, 20)
-addNPCButton:SetPoint("TOPLEFT", npcLabel, "BOTTOMLEFT", -10, -2)
+addNPCButton:SetPoint("TOPLEFT", npcLabel, "BOTTOMLEFT", 10, -5)
 addNPCButton:SetText("Add")
 addNPCButton:SetNormalFontObject("GameFontNormalSmall")
 addNPCButton:SetHighlightFontObject("GameFontHighlightSmall")
