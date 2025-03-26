@@ -2,7 +2,11 @@
 ## Title: Game Master Dice
 ## Notes: An addon for gamemasters of roleplaying games!
 ## Author: Duschgell
-## Version: 1.0.0
-## SavedVariables: GMDicesDB
+## Version: 1.2.0
+## IconTexture: Interface/Icons/inv_misc_dice_02
+## SavedVariables: GameMasterDiceDB
 
+embeds.xml
+settings.lua
 Game_master_dice.lua
+
