@@ -1,4 +1,4 @@
-## Interface: 11.1.0
+## Interface: 120000
 ## Title: Game Master Dice
 ## Notes: An addon for gamemasters of roleplaying games!
 ## Author: Duschgell
@@ -9,4 +9,5 @@
 embeds.xml
 settings.lua
 Game_master_dice.lua
+
 
